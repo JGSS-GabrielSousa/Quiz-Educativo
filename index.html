@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Game</title>
+	<link rel="stylesheet" href="styles.css"/>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<script src="game.js" defer></script>
+	<script src="menu.js" defer></script>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<div id="main-menu">
+		<h1>Super Ultra Hiper Mega Jogo</h1>
+		<button onclick="game_bootstrap()">Jogar</button>
+		<button onclick="credits_screen()">Créditos</button>
+	</div>
+
+	<div id="credits">
+		<h1>Super Ultra Hiper Mega Jogo</h1>
+		<button onclick="back_main_menu()">Voltar</button>
+		<h3>Malu - Game Director</h3>
+		<h3>Carol - Game Design</h3>
+		<h3>Coxas - Executive Producer</h3>
+		<h3>Bilu - Lead Developer</h3>
+	</div>
+</body>
+</html>

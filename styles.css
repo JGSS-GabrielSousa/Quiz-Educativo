@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+
+body {
+    /*background: linear-gradient(to right, #334D8E, #3c5aa6);*/
+    background: lightgray;
+    color: goldenrod;
+    font-family: rubik;
+    margin: 40px;
+    text-align: center;
+    justify-content: center;
+    text-shadow: 2px 0 0 #222, -2px 0 0 #222, 0 2px 0 #222, 0 -2px 0 #222, 2px 2px #222, -2px -2px 0 #222, 2px -2px 0 #222, -2px 2px 0 #222;
+}
+
+h1 {
+    text-align: center;
+    font-size: 54px;
+    margin-top: 0;
+    text-transform: capitalize;
+}
+
+h3 {
+    color: #222;
+    text-shadow: 1px 1px 1px black;
+}
+
+button {
+    margin: 20px;
+    padding: 20px 40px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: goldenrod;
+}
+
+canvas {
+    display: none;
+}
+
+#credits {
+    display: none;
+}
