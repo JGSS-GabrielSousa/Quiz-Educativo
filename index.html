@@ -1,29 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>Game</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerdola Quiz</title>
 	<link rel="stylesheet" href="styles.css"/>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<script src="game.js" defer></script>
-	<script src="menu.js" defer></script>
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
 </head>
 <body>
-	<canvas id="canvas"></canvas>
-	<div id="main-menu">
-		<h1>Super Ultra Hiper Mega Jogo</h1>
-		<button onclick="game_bootstrap()">Jogar</button>
-		<button onclick="credits_screen()">Créditos</button>
-	</div>
+    <header>
+        <h1>Super Ultra Hiper Mega Quiz</h1>
+    </header>
 
-	<div id="credits">
-		<h1>Super Ultra Hiper Mega Jogo</h1>
-		<button onclick="back_main_menu()">Voltar</button>
-		<h3>Malu - Game Director</h3>
-		<h3>Carol - Game Design</h3>
-		<h3>Coxas - Executive Producer</h3>
-		<h3>Bilu - Lead Developer</h3>
-	</div>
+    <div id="interface">
+        <div id="main-menu">
+            <div id="main-menu-btns">
+                <button onclick="game_bootstrap()">Jogar</button>
+                <button onclick="credits_screen()">Créditos</button>
+            </div>
+        
+            <div id="credits">
+                <h3>Malu - Game Director</h3>
+                <h3>Carol - Game Design</h3>
+                <h3>Coxas - Executive Producer</h3>
+                <h3>Bilu - Lead Developer</h3>
+                <button onclick="back_main_menu()">Voltar</button>
+            </div>
+        </div>
+        
+        <div id="question">
+            <h2>Qual o maior campeão do Brasileirão?</h2>
+            <img src="img/Flamengo.png">
+            <div id="options">
+                <button id="btn1">
+                    <p>São Paulo</p>
+                </button>
+
+                <button id="btn2">
+                    <p>Flamengo</p>
+                </button>
+
+                <button id="btn3">
+                    <p>Palmeiras</p>
+                </button>
+
+                <button id="btn4">
+                    <p>Santos</p>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

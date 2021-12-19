@@ -1,40 +1,134 @@
-@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 body {
-    /*background: linear-gradient(to right, #334D8E, #3c5aa6);*/
-    background: lightgray;
-    color: goldenrod;
-    font-family: rubik;
-    margin: 40px;
-    text-align: center;
-    justify-content: center;
-    text-shadow: 2px 0 0 #222, -2px 0 0 #222, 0 2px 0 #222, 0 -2px 0 #222, 2px 2px #222, -2px -2px 0 #222, 2px -2px 0 #222, -2px 2px 0 #222;
+    background-color: #455e6c;
+    display: grid;
+    grid-template-areas:
+    ". logo ."
+    "sidenav content advert"
+    "sidenav footer advert"
+    "sidenav footer2 advert"
+    ;
 }
 
-h1 {
-    text-align: center;
-    font-size: 54px;
-    margin-top: 0;
-    text-transform: capitalize;
-}
-
-h3 {
-    color: #222;
-    text-shadow: 1px 1px 1px black;
+header {
+    grid-area: logo;
+    margin: 20px;
 }
 
 button {
-    margin: 20px;
-    padding: 20px 40px;
-    font-size: 24px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 1px 2px 2px black;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #E4DAD9;
+}
+
+button:hover{
+    background-image: linear-gradient(#E4DAD9, #b1a7a6);
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 4px 4px black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black;
+    color: #ff9b29;
+    font-size: 40px;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    color: #ff9b29;
+    font-size: 36px;
+    text-shadow: 1px 0 0 black, -1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+    color: #ff9b29;    
+    text-shadow: 1px 0 0 black, -1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+p {
+    margin: 5px 0px 5px 0px;
     font-weight: bold;
-    background-color: goldenrod;
+    font-size: 14px;
 }
 
-canvas {
+a, a:visited, a:hover, a:active {
+    color: inherit;
+}
+
+#interface {
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    grid-area: content;
+}
+
+#question {
+    display: flex;
     display: none;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 2px 2px black;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 22px 50px 50px 50px;
+    background-color: #2A2D34;
+    width: 75%;
+    margin: auto;
 }
 
+#options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 300px));
+    white-space: nowrap;
+    grid-gap: 10px;
+    /*
+    display: flex;
+    white-space:nowrap;
+    flex-wrap: wrap;
+    */
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 0 0 black, -1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+#main-menu {
+    margin-top: 30px;
+}
+#main-menu-btns {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+#main-menu-btns button {
+    width: 250px;
+    font-weight: bold;
+    margin: 20px;
+}
 #credits {
     display: none;
+    justify-items: center;
+}
+#credits button {
+    margin: 40px;
+    padding: 10px 20px;
+}
+
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
