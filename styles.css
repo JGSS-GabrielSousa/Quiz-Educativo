@@ -107,7 +107,7 @@ a, a:visited, a:hover, a:active {
 
 #options {
     display: grid;
-    grid-template-columns: repeat(2, minmax(120px, 300px));
+    grid-template-columns: repeat(2, minmax(175px, 300px));
     white-space: nowrap;
     grid-gap: 10px;
     /*
