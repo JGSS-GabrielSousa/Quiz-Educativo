@@ -36,4 +36,22 @@ const geografia = [
         D: "Xangai",
         Correta: "B",
     },
+    {
+        pergunta: "Qual a capital da Finlândia?",
+        nome_imagem: "",
+        A: "Oslo",
+        B: "Helsinque",
+        C: "Copenhage",
+        D: "Estocolmo",
+        Correta: "B",
+    },
+    {
+        pergunta: "Qual a maior economia da África?",
+        nome_imagem: "",
+        A: "Nigéria",
+        B: "África do Sul",
+        C: "Argélia",
+        D: "Egito",
+        Correta: "A",
+    },
 ]
