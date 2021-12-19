@@ -1,21 +1,21 @@
-var astronomia = [
+const astronomia = [
     "Astronomia",
     {
-        pergunta: "Qual o menor país do mundo?",
-        nome_imagem: "geo-menor_pais",
-        A: "Vaticano",
-        B: "Malta",
-        C: "Canadá",
-        D: "Uruguai",
-        Correta: "A"
+        pergunta: "Qual o planeta mais perto do Sol?",
+        nome_imagem: "",
+        A: "Terra",
+        B: "Lua",
+        C: "Vênus",
+        D: "Mercúrio",
+        Correta: "D"
     },
     {
-        pergunta: "Qual o maior país do mundo?",
-        nome_imagem: "geo-maior_pais",
-        A: "Brasil",
-        B: "Estados Unidos",
-        C: "Índia",
-        D: "Rússia",
-        Correta: "D",
+        pergunta: "Qual o maior planeta do Sistema Solar?",
+        nome_imagem: "",
+        A: "Saturno",
+        B: "Marte",
+        C: "Júpiter",
+        D: "Terra",
+        Correta: "C",
     },
 ]

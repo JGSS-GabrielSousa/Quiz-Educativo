@@ -86,6 +86,21 @@ a, a:visited, a:hover, a:active {
     width: 75%;
     margin: auto;
 }
+#question h3 {
+    margin: 0 0;
+}
+
+.wrong {
+    background-color: #2A2D34;
+}
+
+.correct {
+    background-color: #14751d;
+}
+.correct:hover {
+    background-image: linear-gradient(#14751d, #14751d);
+}
+
 
 #options {
     display: grid;
@@ -118,6 +133,18 @@ a, a:visited, a:hover, a:active {
 #credits {
     display: none;
     justify-items: center;
+}
+#select-category {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 2px 2px black;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 22px 50px 50px 50px;
+    background-color: #2A2D34;
+    width: 75%;
+    margin: auto;
 }
 #credits button {
     margin: 40px;

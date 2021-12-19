@@ -1,4 +1,4 @@
-var geografia = [
+const geografia = [
     "Geografia",
     {
         pergunta: "Qual o menor país do mundo?",

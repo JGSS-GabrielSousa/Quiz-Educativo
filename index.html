@@ -7,7 +7,10 @@
     <title>Quiz Educativo</title>
 	<link rel="stylesheet" href="styles.css"/>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="data.js" defer></script>
+
+    <script src="data/geografia.js" defer></script>
+    <script src="data/astronomia.js" defer></script>
+
     <script src="app.js" defer></script>
 </head>
 <body>
@@ -29,27 +32,12 @@
             </div>
         </div>
         
-        <div id="question">
-            <h2>Qual o maior campeão do Brasileirão?</h2>
-            <img src="img/Flamengo.png">
-            <div id="options">
-                <button id="btn1">
-                    <p>São Paulo</p>
-                </button>
-
-                <button id="btn2">
-                    <p>Flamengo</p>
-                </button>
-
-                <button id="btn3">
-                    <p>Palmeiras</p>
-                </button>
-
-                <button id="btn4">
-                    <p>Santos</p>
-                </button>
-            </div>
+        <div id="select-category">
+            <h2>Escolha um tema para as perguntas?</h2>
+            <div id="select-category-options"></div>
         </div>
+
+        <div id="question"></div>
     </div>
 </body>
 </html>
