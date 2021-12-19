@@ -68,28 +68,55 @@ function question_HTML(){
 
 function ChoiceQuestion(selected){
     if(actualQuestions[0].Correta == "A" || actualQuestions[0].Correta == "a"){
-        document.querySelector("#options #btn1").classList.add("correct");
 
-        if(selected == "A")
+        if(selected == "A"){
             points++;
+            document.querySelector("#options #btn1").classList.add("correct");
+        }
+        else if(selected == "B")
+            document.querySelector("#options #btn2").classList.add("wrong");
+        else if(selected == "C")
+            document.querySelector("#options #btn3").classList.add("wrong");
+        else if(selected == "D")
+            document.querySelector("#options #btn4").classList.add("wrong");
     }
     else if(actualQuestions[0].Correta == "B" || actualQuestions[0].Correta == "b"){
         document.querySelector("#options #btn2").classList.add("correct");
 
-        if(selected == "B")
+        if(selected == "B"){
             points++;
+            document.querySelector("#options #btn2").classList.add("correct");
+        }
+        else if(selected == "A")
+            document.querySelector("#options #btn1").classList.add("wrong");
+        else if(selected == "C")
+            document.querySelector("#options #btn3").classList.add("wrong");
+        else if(selected == "D")
+            document.querySelector("#options #btn4").classList.add("wrong");
     }
     else if(actualQuestions[0].Correta == "C" || actualQuestions[0].Correta == "c"){
-        document.querySelector("#options #btn3").classList.add("correct");
-
-        if(selected == "C")
+        if(selected == "C"){
             points++;
+            document.querySelector("#options #btn3").classList.add("correct");
+        }
+        else if(selected == "B")
+            document.querySelector("#options #btn2").classList.add("wrong");
+        else if(selected == "A")
+            document.querySelector("#options #btn1").classList.add("wrong");
+        else if(selected == "D")
+            document.querySelector("#options #btn4").classList.add("wrong");
     }
     else if(actualQuestions[0].Correta == "D" || actualQuestions[0].Correta == "d"){
-        document.querySelector("#options #btn4").classList.add("correct");
-
-        if(selected == "D")
+        if(selected == "D"){
             points++;
+            document.querySelector("#options #btn4").classList.add("correct");
+        }
+        else if(selected == "B")
+            document.querySelector("#options #btn2").classList.add("wrong");
+        else if(selected == "C")
+            document.querySelector("#options #btn3").classList.add("wrong");
+        else if(selected == "A")
+            document.querySelector("#options #btn1").classList.add("wrong");
     }
 
     actualQuestions.splice(0, 1);

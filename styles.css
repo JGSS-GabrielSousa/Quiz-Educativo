@@ -91,7 +91,10 @@ a, a:visited, a:hover, a:active {
 }
 
 .wrong {
-    background-color: #2A2D34;
+    background-color: #831e1e;
+}
+.wrong:hover {
+    background-image: linear-gradient(#831e1e, #831e1e);
 }
 
 .correct {
