@@ -7,11 +7,13 @@
     <title>Quiz Educativo</title>
 	<link rel="stylesheet" href="styles.css"/>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
+    
+    <!-- Arquivos das Perguntas --> 
     <script src="data/geografia.js" defer></script>
     <script src="data/astronomia.js" defer></script>
     <script src="data/geral.js" defer></script>
 
+    <!-- Scripts --> 
     <script src="app.js" defer></script>
 </head>
 <body>
@@ -22,14 +24,14 @@
     <div id="interface">
         <div id="main-menu">
             <div id="main-menu-btns">
-                <button onclick="game_bootstrap()">Jogar</button>
-                <button onclick="credits_screen()">Créditos</button>
+                <button onclick="change_screen('game')">Jogar</button>
+                <button onclick="change_screen('credits')">Créditos</button>
             </div>
         
             <div id="credits">
-                <h3>Maria Luiza - Desenvolvedora e Diretora</h3>
-                <h3>Gabriel Sousa - Apoio no Desenvolvimento</h3>
-                <button onclick="back_main_menu()">Voltar</button>
+                <h3>Maria Luísa Lopes Patriota - Desenvolvedora e Diretora</h3>
+                <h3>José Gabriel de Sousa Silva - Apoio no Desenvolvimento</h3>
+                <button onclick="change_screen('main-menu')">Voltar</button>
             </div>
         </div>
         
