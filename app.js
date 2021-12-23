@@ -136,6 +136,10 @@ function ChoiceQuestion(selected){
 
     if(correct == true){
         points++;
+        PlaySound("correct");
+    }
+    else{
+        PlaySound("wrong");
     }
 
     actualQuestions.splice(0, 1);
@@ -194,4 +198,10 @@ function shuffleArray(array){
         [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
     }
     return array;
+}
+
+function PlaySound(name){
+    const sound = new Audio("sound/"+name+".mp3");
+    sound.volume = 0.2;
+    sound.play();
 }
