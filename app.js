@@ -6,24 +6,36 @@ let points = 0;
 let actualQ = 0;
 let totalQ = 0;
 
-function credits_screen(){
-    document.getElementById("main-menu-btns").style.display = "none";
-    document.getElementById("credits").style.display = "grid";
+inQuestionDelay = false;
+
+const MAX_QUESTIONS = 10;
+
+
+function change_screen(screen){
+    switch (screen) {
+        case "main-menu":
+            document.getElementById("main-menu-btns").style.display = "grid";
+            document.getElementById("credits").style.display = "none";
+            break;
+
+        case "credits":
+            document.getElementById("main-menu-btns").style.display = "none";
+            document.getElementById("credits").style.display = "grid";
+            break;
+
+        case "game":
+            document.getElementById("main-menu-btns").style.display = "none";
+            document.getElementById("select-category").style.display = "flex";
+            select_category_HTML();
+            break;
+    
+        default:
+            break;
+    }
 }
 
-function back_main_menu(){
-    document.getElementById("main-menu-btns").style.display = "grid";
-    document.getElementById("credits").style.display = "none";
-}
 
 function game_bootstrap(){
-    document.getElementById("main-menu-btns").style.display = "none";
-    document.getElementById("select-category").style.display = "flex";
-
-    select_category_HTML();
-}
-
-function game_bootstrap2(){
     document.getElementById("select-category").style.display = "none";
     document.getElementById("question").style.display = "flex";
 
@@ -64,15 +76,20 @@ function question_HTML(){
             </button>
         </div>
     `;
+    inQuestionDelay = false;
 }
 
 function ChoiceQuestion(selected){
-    if(actualQuestions[0].Correta == "A" || actualQuestions[0].Correta == "a"){
+    if(inQuestionDelay)
+        return;
 
-        if(selected == "A"){
-            points++;
-            document.querySelector("#options #btn1").classList.add("correct");
-        }
+    let correct = false;
+
+    if(actualQuestions[0].Correta == "A" || actualQuestions[0].Correta == "a"){
+        document.querySelector("#options #btn1").classList.add("correct");
+
+        if(selected == "A")
+            correct = true;
         else if(selected == "B")
             document.querySelector("#options #btn2").classList.add("wrong");
         else if(selected == "C")
@@ -83,10 +100,8 @@ function ChoiceQuestion(selected){
     else if(actualQuestions[0].Correta == "B" || actualQuestions[0].Correta == "b"){
         document.querySelector("#options #btn2").classList.add("correct");
 
-        if(selected == "B"){
-            points++;
-            document.querySelector("#options #btn2").classList.add("correct");
-        }
+        if(selected == "B")
+            correct = true;
         else if(selected == "A")
             document.querySelector("#options #btn1").classList.add("wrong");
         else if(selected == "C")
@@ -95,10 +110,10 @@ function ChoiceQuestion(selected){
             document.querySelector("#options #btn4").classList.add("wrong");
     }
     else if(actualQuestions[0].Correta == "C" || actualQuestions[0].Correta == "c"){
-        if(selected == "C"){
-            points++;
-            document.querySelector("#options #btn3").classList.add("correct");
-        }
+        document.querySelector("#options #btn3").classList.add("correct");
+
+        if(selected == "C")
+            correct = true;
         else if(selected == "B")
             document.querySelector("#options #btn2").classList.add("wrong");
         else if(selected == "A")
@@ -107,10 +122,10 @@ function ChoiceQuestion(selected){
             document.querySelector("#options #btn4").classList.add("wrong");
     }
     else if(actualQuestions[0].Correta == "D" || actualQuestions[0].Correta == "d"){
-        if(selected == "D"){
-            points++;
-            document.querySelector("#options #btn4").classList.add("correct");
-        }
+        document.querySelector("#options #btn4").classList.add("correct");
+
+        if(selected == "D")
+            correct = true;
         else if(selected == "B")
             document.querySelector("#options #btn2").classList.add("wrong");
         else if(selected == "C")
@@ -119,15 +134,18 @@ function ChoiceQuestion(selected){
             document.querySelector("#options #btn1").classList.add("wrong");
     }
 
+    if(correct == true){
+        points++;
+    }
+
     actualQuestions.splice(0, 1);
-
     actualQ++;
-
+    inQuestionDelay = true;
     if(actualQ >= totalQ){
-        setTimeout(EndScreen, 1000);
+        setTimeout(EndScreen, 2000);
     }
     else{
-        setTimeout(question_HTML, 1000);
+        setTimeout(question_HTML, 2000);
     }
 }
 
@@ -143,7 +161,7 @@ function LoadGameCategory(category){
     actualQuestions = data;
     totalQ = actualQuestions.length;
 
-    game_bootstrap2();
+    game_bootstrap();
 }
 
 function get_questions(category){
@@ -159,6 +177,10 @@ function get_questions(category){
 
     data.splice(0, 1);
     data = shuffleArray(data);
+
+    if(data.length > MAX_QUESTIONS)
+        data = data.splice(0, MAX_QUESTIONS)
+
     return data;
 }
 
