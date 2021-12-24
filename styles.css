@@ -60,6 +60,7 @@ p {
     margin: 5px 0px 5px 0px;
     font-weight: bold;
     font-size: 14px;
+    white-space: pre-wrap;
 }
 
 a, a:visited, a:hover, a:active {
