@@ -90,6 +90,20 @@ a, a:visited, a:hover, a:active {
     margin: 0 0;
 }
 
+#end-screen {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 2px 2px black;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 22px 50px 50px 50px;
+    background-color: #2A2D34;
+    margin: auto;
+    width: 85%;
+}
+
 .wrong {
     background-color: #831e1e;
 }
