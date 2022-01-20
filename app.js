@@ -1,4 +1,4 @@
-var questions = [astronomia,geografia,geral];
+var questions = [astronomia,geografia,geral,historia];
 
 var actualQuestions;
 
