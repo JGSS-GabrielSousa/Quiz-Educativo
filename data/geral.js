@@ -1,15 +1,6 @@
 const geral = [
     "Geral",
     {
-        pergunta: "O Macarrão está para o Molho assim como o Tijolo está para...",
-        nome_imagem: "",
-        A: "Alicerce",
-        B: "Cimento",
-        C: "Cerâmica",
-        D: "Pedreiro",
-        Correta: "B"
-    },
-    {
         pergunta: "Qual animal está fora do padrão dos demais?",
         nome_imagem: "",
         A: "Cachorro",
@@ -91,6 +82,15 @@ const geral = [
         Correta: "B"
     },
     {
+        pergunta: "O que a palavra \"Push\" significa em português?",
+        nome_imagem: "",
+        A: "Puxar",
+        B: "Empurrar",
+        C: "Pegar",
+        D: "Pular",
+        Correta: "B"
+    },
+    {
         pergunta: "Qual o mínimo de jogadores de um time numa partida de futebol?",
         nome_imagem: "",
         A: "7",
@@ -141,7 +141,7 @@ const geral = [
         A: "Dubai",
         B: "Qatar",
         C: "Abu Dhabi",
-        D: "Emirados Árabes Unidos",
+        D: "Doha",
         Correta: "D"
     },
     {
@@ -205,6 +205,60 @@ const geral = [
         B: "Ferro",
         C: "Flúor",
         D: "Fleróvio",
+        Correta: "C"
+    },
+    {
+        pergunta: "Qual a religião monoteísta que conta com o maior número de adeptos no mundo?",
+        nome_imagem: "",
+        A: "Islamismo",
+        B: "Judaísmo",
+        C: "Cristianismo",
+        D: "Hinduísmo",
+        Correta: "C"
+    },
+    {
+        pergunta: "As pessoas de qual tipo sanguíneo são consideradas doadores universais?",
+        nome_imagem: "",
+        A: "A",
+        B: "B",
+        C: "O",
+        D: "AB",
+        Correta: "C"
+    },
+    {
+        pergunta: "Como se chamam os vasos que transportam sangue do coração para a periferia do corpo?",
+        nome_imagem: "",
+        A: "Veias",
+        B: "Ventrículos",
+        C: "Átrios",
+        D: "Artérias",
+        Correta: "D"
+    },
+    {
+        pergunta: "Que substância é absorvida pelas plantas e expirada por todos os seres vivos?",
+        nome_imagem: "",
+        A: "Oxigênio",
+        B: "Dióxido de Carbono",
+        C: "Nitrogênio",
+        D: "Nitrato de Sódio",
+        Correta: "B"
+    },
+    {
+        pergunta: "Quantos graus são necessários para que dois ângulos sejam complementares?",
+        nome_imagem: "",
+        A: "45",
+        B: "90",
+        C: "180",
+        D: "360",
+        Correta: "B"
+    },
+    {
+        pergunta: "Quantos graus é a soma das medidas dos ângulos internos de um triângulo?",
+        nome_imagem: "",
+        A: "45",
+        B: "90",
+        C: "180",
+        D: "360",
         Correta: "C"
     },
 ]
