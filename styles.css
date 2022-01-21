@@ -89,6 +89,9 @@ a, a:visited, a:hover, a:active {
 #question h3 {
     margin: 0 0;
 }
+#question img {
+    margin-bottom: 20px;
+}
 
 #end-screen {
     display: flex;

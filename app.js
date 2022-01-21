@@ -59,9 +59,16 @@ function select_category_HTML(){
 }
 
 function question_HTML(){
-    document.getElementById("question").innerHTML = `
+    let html = `
         <h3>Pergunta ${actualQ+1} de ${totalQ}</h3>
         <h2>${actualQuestions[0].pergunta}</h2>
+    `;
+
+    if(actualQuestions[0].nome_imagem != ""){
+        html += `<img src="img/questions/${actualQuestions[0].nome_imagem}.jpg">`;
+    }
+
+    html += `
         <div id="options">
             <button id="btn1" onclick="ChoiceQuestion('A')">
                 <p>${actualQuestions[0].A}</p>
@@ -80,6 +87,8 @@ function question_HTML(){
             </button>
         </div>
     `;
+    
+    document.getElementById("question").innerHTML = html;
     inQuestionDelay = false;
 }
 
