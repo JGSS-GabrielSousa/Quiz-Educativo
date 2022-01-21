@@ -39,6 +39,7 @@ h1 {
     text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 4px 4px black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black;
     color: #ff9b29;
     font-size: 40px;
+    margin: 0;
 }
 
 h2 {
@@ -56,6 +57,23 @@ h3 {
     text-shadow: 1px 0 0 black, -1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
 }
 
+figure {
+    display: grid;
+    justify-items: center;
+    width: 200px;
+}
+
+figcaption {
+    width: 100%;
+    text-align: center;
+    color: #ff9b29;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 0 0 black, -1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+    border-radius: 20px;
+    padding: 5px;
+}
+
 p {
     margin: 5px 0px 5px 0px;
     font-weight: bold;
@@ -65,6 +83,50 @@ p {
 
 a, a:visited, a:hover, a:active {
     color: inherit;
+}
+
+.person-credit {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.person-credit img {
+    height: 150px;
+    width: 150px;
+    border-radius: 10%;
+    border: 1px solid;
+}
+.person-credit h3 {
+    font-size: 24px;
+}
+
+.person-info {
+    display: grid;
+    align-content: flex-start;
+    width: 100%;
+    height: 100%;
+}
+.person-info ul {
+    background-color: #e4dad9;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.person-info h3 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.person-social {
+    display: flex;
+}
+.person-social img{
+    height: 30px;
+    width: auto;
+    box-shadow: 2px 2px 5px;
+    cursor: pointer;
 }
 
 #interface {
@@ -153,6 +215,8 @@ a, a:visited, a:hover, a:active {
 #credits {
     display: none;
     justify-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 #select-category {
     display: none;
@@ -168,17 +232,31 @@ a, a:visited, a:hover, a:active {
 }
 #select-category-options{
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(125px, 0.5fr));
+    grid-gap: 10px;
     align-content: center;
     justify-content: center;
     align-items: center;
+    justify-items: center;
 }
 #select-category-options button{
     width: inherit;
 }
-#credits button {
-    margin: 40px;
-    padding: 10px 20px;
+#back-from-credits {
+    font-weight: bold;
+}
+
+.person-social button{
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: none;
+    border: none;
+    margin: 10px;
+}
+.person-social button:hover{
+    background-image: linear-gradient(transparent, transparent);
 }
 
 .no-select {
