@@ -1,5 +1,5 @@
-const medicina = [
-    "Medicina",
+const corpo_humano = [
+    "Corpo Humano",
     {
         pergunta: "Qual a especialidade médica estudada para se cuidar do ouvido, nariz e garganta?",
         nome_imagem: "",
