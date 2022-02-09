@@ -57,12 +57,6 @@ function change_screen(screen){
     }
 }
 
-function updateOptions(change){
-    document.querySelector("#number-of-questions input").oninput = function() {
-        document.querySelector("#number-of-questions p").innerText = this.value;
-    }
-}
-
 function select_category_HTML(){
     document.getElementById("select-category-options").innerHTML = "";
 
@@ -194,7 +188,7 @@ function EndScreen(){
         document.getElementById("end-screen").innerHTML += `<h2>Infelizmente você não acertou nenhuma questão :(</h2>`;
     }
     else{
-        document.getElementById("end-screen").innerHTML += `<h2>Você acertou ${points} de ${totalQuestions} questões!</h2>`;
+        document.getElementById("end-screen").innerHTML += `<h2>Você acertou ${points} de ${totalQuestions} questões (${(points/totalQuestions)*100}%)!</h2>`;
     }
 
     document.getElementById("end-screen").innerHTML += `<button onclick='document.location.reload("true")'>Reiniciar</button>`;
@@ -246,3 +240,18 @@ function PlaySound(name){
     sound.volume = 0.2;
     sound.play();
 }
+
+//Events
+
+window.addEventListener("load", function(){
+    document.querySelector("#number-of-questions input").value = parseInt(localStorage.getItem("number-of-questions"));
+    document.querySelector("#number-of-questions p").innerText = document.querySelector("#number-of-questions input").value;
+});
+
+document.querySelector("#number-of-questions input").addEventListener("input", function() {
+    document.querySelector("#number-of-questions p").innerText = this.value;
+});
+
+document.querySelector("#number-of-questions input").addEventListener("change", function() {
+    localStorage.setItem('number-of-questions', this.value);
+});

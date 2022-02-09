@@ -41,8 +41,8 @@
 
         <div id="options">
             <div id="number-of-questions" class="option-container floating-container">
-                <h3>Número de Perguntas:</h3>
-                <input type="range" min="1" max="30" value="10" class="slider" oninput="updateOptions('number-of-questions')">
+                <h3>Número Máximo de Perguntas:</h3>
+                <input type="range" min="1" max="30" value="10" class="slider">
                 <p>10</p>
             </div>
 
@@ -128,7 +128,7 @@
 
         <div id="game-container">
             <div id="question" class="floating-container"></div>
-            <button onclick="change_screen('select-category')">Voltar</button>
+            <button onclick="document.location.reload('true')">Reiniciar</button>
         </div>
 
         <div id="end-screen" class="floating-container"></div>
