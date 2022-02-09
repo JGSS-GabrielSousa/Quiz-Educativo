@@ -2,7 +2,7 @@ const geografia = [
     "Geografia",
     {
         pergunta: "Qual o menor país do mundo?",
-        nome_imagem: "geo-menor_pais",
+        nome_imagem: "",
         A: "Vaticano",
         B: "Malta",
         C: "Canadá",
@@ -11,7 +11,7 @@ const geografia = [
     },
     {
         pergunta: "Qual o maior país do mundo?",
-        nome_imagem: "geo-maior_pais",
+        nome_imagem: "",
         A: "Brasil",
         B: "Estados Unidos",
         C: "Índia",
