@@ -188,7 +188,7 @@ function EndScreen(){
         document.getElementById("end-screen").innerHTML += `<h2>Infelizmente você não acertou nenhuma questão :(</h2>`;
     }
     else{
-        document.getElementById("end-screen").innerHTML += `<h2>Você acertou ${points} de ${totalQuestions} questões (${(points/totalQuestions)*100}%)!</h2>`;
+        document.getElementById("end-screen").innerHTML += `<h2>Você acertou ${points} de ${totalQuestions} questões (${parseInt((points/totalQuestions)*100)}%)!</h2>`;
     }
 
     document.getElementById("end-screen").innerHTML += `<button onclick='document.location.reload("true")'>Reiniciar</button>`;
