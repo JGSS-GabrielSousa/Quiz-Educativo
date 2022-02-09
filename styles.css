@@ -165,6 +165,10 @@ a, a:visited, a:hover, a:active {
     width: 100%;
 }
 
+#end-screen {
+    display: none;
+}
+
 .wrong {
     background-color: #831e1e;
 }
