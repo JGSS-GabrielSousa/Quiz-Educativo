@@ -1,3 +1,3 @@
 # Quiz-Educativo
 
-https://jgss-gabrielsousa.github.io/Quiz-Educativo/
+https://jgss-gabriel-sousa.github.io/Quiz-Educativo/
