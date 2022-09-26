@@ -8,55 +8,6 @@ let number_of_questions = 10;
 
 let inQuestionDelay = false;
 
-
-function change_screen(screen){
-    document.getElementById("main-menu").style.display = "none";
-
-    switch (screen) {
-        case "main-menu":
-            document.getElementById("main-menu").style.display = "grid";
-            document.getElementById("credits").style.display = "none";
-            document.getElementById("instructions").style.display = "none";
-            document.getElementById("options").style.display = "none";
-            document.getElementById("select-category").style.display = "none";
-            document.getElementById("title").innerText = "Quiz Educativo";
-            break;
-
-        case "instructions":
-            document.getElementById("instructions").style.display = "block";
-            document.getElementById("title").innerText = "Instruções";
-            break;
-
-        case "options":
-            document.getElementById("options").style.display = "block";
-            document.getElementById("title").innerText = "Opções";
-            break;
-
-        case "credits":
-            document.getElementById("credits").style.display = "flex";
-            document.getElementById("title").innerText = "Créditos";
-            break;
-
-        case "select-category":
-            document.getElementById("select-category").style.display = "flex";
-            document.getElementById("game-container").style.display = "none";
-            document.getElementById("title").innerText = "Quiz Educativo";
-            select_category_HTML();
-            break;
-
-        case "game-bootstrap":
-            document.getElementById("select-category").style.display = "none";
-            document.getElementById("game-container").style.display = "block";
-            question_HTML();
-            break;
-
-        case "end":
-            document.getElementById("game-container").style.display = "none";
-            document.getElementById("end-screen").style.display = "flex";
-            break;
-    }
-}
-
 function select_category_HTML(){
     document.getElementById("select-category-options").innerHTML = "";
 
@@ -64,7 +15,7 @@ function select_category_HTML(){
         const element = categories[i];
 
         document.getElementById("select-category-options").innerHTML += `
-            <button onclick="LoadCategory('${element[0]}')"">
+            <button onclick="loadCategory('${element[0]}')"">
                 <p>${element[0]}</p>
             </button>
         `;
@@ -83,19 +34,19 @@ function question_HTML(){
 
     html += `
         <div id="question-options">
-            <button id="btn1" onclick="ChoiceQuestion('A')">
+            <button id="btn1" onclick="choiceQuestion('A')">
                 <p>${actualQuestions[0].A}</p>
             </button>
 
-            <button id="btn2" onclick="ChoiceQuestion('B')">
+            <button id="btn2" onclick="choiceQuestion('B')">
                 <p>${actualQuestions[0].B}</p>
             </button>
 
-            <button id="btn3" onclick="ChoiceQuestion('C')">
+            <button id="btn3" onclick="choiceQuestion('C')">
                 <p>${actualQuestions[0].C}</p>
             </button>
 
-            <button id="btn4" onclick="ChoiceQuestion('D')">
+            <button id="btn4" onclick="choiceQuestion('D')">
                 <p>${actualQuestions[0].D}</p>
             </button>
         </div>
@@ -105,7 +56,7 @@ function question_HTML(){
     inQuestionDelay = false;
 }
 
-function ChoiceQuestion(selected){
+function choiceQuestion(selected){
     if(inQuestionDelay)
         return;
 
@@ -162,39 +113,23 @@ function ChoiceQuestion(selected){
 
     if(correct == true){
         points++;
-        PlaySound("correct");
+        playSound("correct");
     }
     else{
-        PlaySound("wrong");
+        playSound("wrong");
     }
 
     actualQuestions.splice(0, 1);
     inQuestionDelay = true;
     if(actualQuestions.length == 0){
-        setTimeout(EndScreen, 2000);
+        setTimeout(endScreen, 2000);
     }
     else{
         setTimeout(question_HTML, 2000);
     }
 }
 
-function EndScreen(){
-    change_screen("end");
-
-    if(points == totalQuestions){
-        document.getElementById("end-screen").innerHTML += `<h2>Parabéns!!! Você acertou todas as questões!</h2><h2>Você é Fera!!!</h2>`;
-    }
-    else if(points == 0){
-        document.getElementById("end-screen").innerHTML += `<h2>Infelizmente você não acertou nenhuma questão :(</h2>`;
-    }
-    else{
-        document.getElementById("end-screen").innerHTML += `<h2>Você acertou ${points} de ${totalQuestions} questões (${parseInt((points/totalQuestions)*100)}%)!</h2>`;
-    }
-
-    document.getElementById("end-screen").innerHTML += `<button onclick='document.location.reload("true")'>Reiniciar</button>`;
-}
-
-function LoadCategory(category){
+function loadCategory(category){
     let data = get_questions(category);
     actualQuestions = data;
     totalQuestions = actualQuestions.length;
@@ -222,36 +157,3 @@ function get_questions(category){
 
     return data;
 }
-
-function shuffleArray(array){
-    let currentIndex = array.length, randomIndex;
-
-    while (currentIndex != 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-
-        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-    }
-    return array;
-}
-
-function PlaySound(name){
-    const sound = new Audio("sound/"+name+".mp3");
-    sound.volume = 0.2;
-    sound.play();
-}
-
-//Events
-
-window.addEventListener("load", function(){
-    document.querySelector("#number-of-questions input").value = parseInt(localStorage.getItem("number-of-questions"));
-    document.querySelector("#number-of-questions p").innerText = document.querySelector("#number-of-questions input").value;
-});
-
-document.querySelector("#number-of-questions input").addEventListener("input", function() {
-    document.querySelector("#number-of-questions p").innerText = this.value;
-});
-
-document.querySelector("#number-of-questions input").addEventListener("change", function() {
-    localStorage.setItem('number-of-questions', this.value);
-});

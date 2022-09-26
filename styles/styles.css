@@ -4,13 +4,11 @@
 
 body {
     background-color: #455e6c;
-    display: grid;
-    grid-template-areas:
-    ". logo ."
-    "sidenav content advert"
-    "sidenav footer advert"
-    "sidenav footer2 advert"
-    ;
+    display: flex;
+    margin: 0px;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
 header {
@@ -38,7 +36,8 @@ h1 {
     text-align: center;
     text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 4px 4px black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black;
     color: #ff9b29;
-    font-size: 40px;
+    font-size: 38px;
+    margin-top: 20px;
 }
 
 h2 {
@@ -59,9 +58,7 @@ h3 {
 }
 
 figure {
-    display: grid;
-    justify-items: center;
-    width: 200px;
+    margin: 0;
 }
 
 figcaption {
@@ -86,49 +83,7 @@ a, a:visited, a:hover, a:active {
     color: inherit;
 }
 
-.person-credit {
-    display: flex;
-    width: 100%;
-}
-
-.person-credit img {
-    height: 150px;
-    width: 150px;
-    border-radius: 10%;
-    border: 1px solid;
-}
-.person-credit h3 {
-    font-size: 24px;
-}
-
-.person-info {
-    display: grid;
-    align-content: flex-start;
-    width: 100%;
-    height: 100%;
-}
-.person-info ul {
-    background-color: #e4dad9;
-    border-radius: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.person-info h3 {
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
-
-.person-social {
-    display: flex;
-}
-.person-social img{
-    height: 30px;
-    width: auto;
-    box-shadow: 2px 2px 5px;
-    cursor: pointer;
-}
-
-.floating-container {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,12 +95,6 @@ a, a:visited, a:hover, a:active {
     margin: 20px;
     color: #ff9b29;
     text-shadow: 1px 0 0 black, -1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
-}
-
-#interface {
-    justify-content: center;
-    width: 100%;
-    grid-area: content;
 }
 
 #game-container{
@@ -184,10 +133,8 @@ a, a:visited, a:hover, a:active {
 }
 
 #main-menu {
-    margin-top: 30px;
-    display: grid;
-    align-items: center;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
 }
 #main-menu button {
     width: 250px;
@@ -221,12 +168,6 @@ a, a:visited, a:hover, a:active {
 .option-container{
     padding-bottom: 20px;
     margin-bottom: 20px;
-}
-
-#credits {
-    display: none;
-    flex-direction: column;
-    align-items: center;
 }
 
 #select-category {

@@ -1,0 +1,46 @@
+#credits {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+#credits > div {
+    display: flex;
+    margin: 0px 20px;
+}
+
+.person-credit img {
+    height: 150px;
+    width: 150px;
+    border-radius: 10%;
+    border: 1px solid;
+}
+.person-credit h3 {
+    font-size: 24px;
+}
+
+.person-info {
+    display: grid;
+    align-content: flex-start;
+    width: 100%;
+    height: 100%;
+}
+.person-info ul {
+    background-color: #e4dad9;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.person-info h3 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.person-social {
+    display: flex;
+}
+.person-social img{
+    height: 30px;
+    width: auto;
+    box-shadow: 2px 2px 5px;
+    cursor: pointer;
+}

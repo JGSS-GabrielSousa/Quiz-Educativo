@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Educativo</title>
-	<link rel="stylesheet" href="styles.css"/>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="./styles/styles.css"/>
+	<link rel="stylesheet" href="./styles/pages/credits.css"/>
     
     <!-- Arquivos das Perguntas --> 
     <script src="data/astronomia.js" defer></script>
@@ -16,14 +19,17 @@
     <script src="data/historia.js" defer></script>
 
     <!-- Scripts --> 
-    <script src="app.js" defer></script>
+    <script src="./scripts/funcs.js" defer></script>
+    <script src="./scripts/app.js" defer></script>
+    <script src="./scripts/screens.js" defer></script>
+    <script src="./scripts/events.js" defer></script>
 </head>
 <body>
     <header>
         <h1 id="title">Quiz Educativo</h1>
     </header>
 
-    <div id="interface">
+    <main>
         <div id="main-menu">
             <button onclick="change_screen('select-category')">Jogar</button>
             <button onclick="change_screen('instructions')">Instruções</button>
@@ -32,7 +38,7 @@
         </div>
     
         <div id="instructions">
-            <div class="floating-container">
+            <div class="container">
                 <p>Clique em Jogar e escolha uma categoria de perguntas. Por padrão o quiz lhe fará 10 perguntas.</p>
                 <p>Ao responder uma pergunta, será informado por cor e som se ela estava correta. Ao final das perguntas a quantidade de acertos total é revelada.</p>
             </div>
@@ -40,7 +46,7 @@
         </div>
 
         <div id="options">
-            <div id="number-of-questions" class="option-container floating-container">
+            <div id="number-of-questions" class="option-container container">
                 <h3>Número Máximo de Perguntas:</h3>
                 <input type="range" min="1" max="30" value="10" class="slider">
                 <p>10</p>
@@ -114,7 +120,7 @@
         </div>
 
         <div id="select-category">
-            <div class="floating-container">
+            <div class="container">
                 <h2>Escolha um tema para as perguntas?</h2>
                 <div id="select-category-options"></div>
             </div>
@@ -122,11 +128,11 @@
         </div>
 
         <div id="game-container">
-            <div id="question" class="floating-container"></div>
+            <div id="question" class="container"></div>
             <button onclick="document.location.reload('true')">Reiniciar</button>
         </div>
 
-        <div id="end-screen" class="floating-container"></div>
-    </div>
+        <div id="end-screen" class="container"></div>
+    </main>
 </body>
 </html>
