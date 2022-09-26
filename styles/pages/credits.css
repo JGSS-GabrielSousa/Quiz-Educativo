@@ -3,9 +3,10 @@
     flex-direction: column;
     align-items: center;
 }
-#credits > div {
+.person-credit {
     display: flex;
-    margin: 0px 20px;
+    margin: 10px 20px;
+    width: 100%;
 }
 
 .person-credit img {
