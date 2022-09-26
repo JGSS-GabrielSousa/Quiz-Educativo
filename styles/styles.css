@@ -31,49 +31,33 @@ button:hover{
     transform: translateY(-5px);
 }
 
-h1 {
-    width: 100%;
+h1,h2,h3,figcaption {
     text-align: center;
     text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 4px 4px black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black;
     color: #ff9b29;
     font-size: 38px;
     margin-top: 20px;
+    font-weight: bold;
 }
 
-h2 {
-    margin-top: auto;
-    width: 100%;
-    text-align: center;
-    color: #ff9b29;
+h2,h3,figcaption {
     font-size: 32px;
+    margin-top: auto;
     text-shadow: 1px 0 0 black, -1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
 }
 
 h3 {
-    margin-top: auto;
-    width: 100%;
-    text-align: center;
-    color: #ff9b29;    
-    text-shadow: 1px 0 0 black, -1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
-}
-
-figure {
-    margin: 0;
+    font-size: 24px;
 }
 
 figcaption {
-    width: 100%;
-    text-align: center;
-    color: #ff9b29;
     font-size: 20px;
-    font-weight: bold;
-    text-shadow: 1px 0 0 black, -1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
     border-radius: 20px;
     padding: 5px;
 }
 
 p {
-    margin: 5px 0px 5px 0px;
+    margin: 5px 0px;
     font-weight: bold;
     font-size: 14px;
     white-space: pre-wrap;
@@ -188,16 +172,4 @@ a, a:visited, a:hover, a:active {
 }
 #select-category-options button{
     width: inherit;
-}
-
-.person-social button{
-    background-color: transparent;
-    margin: 0px;
-    padding: 0px;
-    box-shadow: none;
-    border: none;
-    margin: 10px;
-}
-.person-social button:hover{
-    background-image: linear-gradient(transparent, transparent);
 }

@@ -9,6 +9,13 @@
     width: 100%;
 }
 
+.person-credit figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
 .person-credit img {
     height: 150px;
     width: 150px;
@@ -44,4 +51,16 @@
     width: auto;
     box-shadow: 2px 2px 5px;
     cursor: pointer;
+}
+
+.person-social button{
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: none;
+    border: none;
+    margin: 10px;
+}
+.person-social button:hover{
+    background-image: linear-gradient(transparent, transparent);
 }
