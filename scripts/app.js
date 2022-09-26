@@ -32,26 +32,21 @@ function question_HTML(){
         html += `<img src="img/questions/${actualQuestions[0].nome_imagem}.jpg">`;
     }
 
-    html += `
-        <div id="question-options">
-            <button id="btn1" onclick="choiceQuestion('A')">
-                <p>${actualQuestions[0].A}</p>
-            </button>
+    let qOrder = shuffleArray(["A","B","C","D"]); 
 
-            <button id="btn2" onclick="choiceQuestion('B')">
-                <p>${actualQuestions[0].B}</p>
-            </button>
+    html += '<div id="question-options">';
+    for(let i = 0; i < qOrder.length; i++) {
 
-            <button id="btn3" onclick="choiceQuestion('C')">
-                <p>${actualQuestions[0].C}</p>
+        console.log(qOrder[i]);
+        console.log(actualQuestions[0][qOrder[i]]);
+        html += `
+            <button id="btn${qOrder[i]}" onclick="choiceQuestion('${qOrder[i]}')">
+                <p>${actualQuestions[0][qOrder[i]]}</p>
             </button>
+        `;
+    }
+    html += '</div>';
 
-            <button id="btn4" onclick="choiceQuestion('D')">
-                <p>${actualQuestions[0].D}</p>
-            </button>
-        </div>
-    `;
-    
     document.getElementById("question").innerHTML = html;
     inQuestionDelay = false;
 }
@@ -63,52 +58,52 @@ function choiceQuestion(selected){
     let correct = false;
 
     if(actualQuestions[0].Correta == "A" || actualQuestions[0].Correta == "a"){
-        document.querySelector("#question-options #btn1").classList.add("correct");
+        document.querySelector("#question-options #btnA").classList.add("correct");
 
         if(selected == "A")
             correct = true;
         else if(selected == "B")
-            document.querySelector("#question-options #btn2").classList.add("wrong");
+            document.querySelector("#question-options #btnB").classList.add("wrong");
         else if(selected == "C")
-            document.querySelector("#question-options #btn3").classList.add("wrong");
+            document.querySelector("#question-options #btnC").classList.add("wrong");
         else if(selected == "D")
-            document.querySelector("#question-options #btn4").classList.add("wrong");
+            document.querySelector("#question-options #btnD").classList.add("wrong");
     }
     else if(actualQuestions[0].Correta == "B" || actualQuestions[0].Correta == "b"){
-        document.querySelector("#question-options #btn2").classList.add("correct");
+        document.querySelector("#question-options #btnB").classList.add("correct");
 
         if(selected == "B")
             correct = true;
         else if(selected == "A")
-            document.querySelector("#question-options #btn1").classList.add("wrong");
+            document.querySelector("#question-options #btnA").classList.add("wrong");
         else if(selected == "C")
-            document.querySelector("#question-options #btn3").classList.add("wrong");
+            document.querySelector("#question-options #btnC").classList.add("wrong");
         else if(selected == "D")
-            document.querySelector("#question-options #btn4").classList.add("wrong");
+            document.querySelector("#question-options #btnD").classList.add("wrong");
     }
     else if(actualQuestions[0].Correta == "C" || actualQuestions[0].Correta == "c"){
-        document.querySelector("#question-options #btn3").classList.add("correct");
+        document.querySelector("#question-options #btnC").classList.add("correct");
 
         if(selected == "C")
             correct = true;
         else if(selected == "B")
-            document.querySelector("#question-options #btn2").classList.add("wrong");
+            document.querySelector("#question-options #btnB").classList.add("wrong");
         else if(selected == "A")
-            document.querySelector("#question-options #btn1").classList.add("wrong");
+            document.querySelector("#question-options #btnA").classList.add("wrong");
         else if(selected == "D")
-            document.querySelector("#question-options #btn4").classList.add("wrong");
+            document.querySelector("#question-options #btnD").classList.add("wrong");
     }
     else if(actualQuestions[0].Correta == "D" || actualQuestions[0].Correta == "d"){
-        document.querySelector("#question-options #btn4").classList.add("correct");
+        document.querySelector("#question-options #btnD").classList.add("correct");
 
         if(selected == "D")
             correct = true;
         else if(selected == "B")
-            document.querySelector("#question-options #btn2").classList.add("wrong");
+            document.querySelector("#question-options #btnB").classList.add("wrong");
         else if(selected == "C")
-            document.querySelector("#question-options #btn3").classList.add("wrong");
+            document.querySelector("#question-options #btnC").classList.add("wrong");
         else if(selected == "A")
-            document.querySelector("#question-options #btn1").classList.add("wrong");
+            document.querySelector("#question-options #btnA").classList.add("wrong");
     }
 
     if(correct == true){
