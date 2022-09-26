@@ -1,0 +1,35 @@
+#question h3 {
+    margin: 0px 0px 20px 0px;
+}
+#question img {
+    margin-bottom: 20px;
+}
+#question-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+#restart-button {
+    background-color: #bb3939;
+    color: #f5f5f5;
+}
+#restart-button:hover{
+    background-image: linear-gradient(#bb3939, #831e1e);
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.wrong {
+    background-color: #831e1e;
+}
+.wrong:hover {
+    background-image: linear-gradient(#831e1e, #831e1e);
+}
+
+.correct {
+    background-color: #14751d;
+}
+.correct:hover {
+    background-image: linear-gradient(#14751d, #14751d);
+}
