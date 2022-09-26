@@ -1,4 +1,4 @@
-const categories = [astronomia,geografia,geral,historia,corpo_humano];
+const categories = [astronomia,corpo_humano,futebol,geografia,geral,historia];
 
 var actualQuestions;
 
