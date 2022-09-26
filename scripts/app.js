@@ -37,8 +37,6 @@ function question_HTML(){
     html += '<div id="question-options">';
     for(let i = 0; i < qOrder.length; i++) {
 
-        console.log(qOrder[i]);
-        console.log(actualQuestions[0][qOrder[i]]);
         html += `
             <button id="btn${qOrder[i]}" onclick="choiceQuestion('${qOrder[i]}')">
                 <p>${actualQuestions[0][qOrder[i]]}</p>
