@@ -6,9 +6,6 @@
     margin: 10px;
     word-break: break-word;
 }
-#question img {
-    width: 100%;
-}
 #question-options {
     margin-top: 20px;
     display: grid;
@@ -19,8 +16,7 @@
 #restart-button {
     background-color: #bb3939;
     color: #f5f5f5;
-	margin: 0;
-    margin-top: 20px;
+	margin: 20px;
 }
 #restart-button:hover{
     background-image: linear-gradient(#bb3939, #831e1e);
