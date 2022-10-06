@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "./scrollbar.css";
+
 * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: #455e6c;
+    background-color: #1A80B8;
     display: flex;
     margin: 0px;
     flex-direction: column;
@@ -17,9 +20,9 @@ header {
 
 button {
     padding: 20px;
-    margin: 10px;
-    box-shadow: 1px 2px 2px black;
-    font-size: 20px;
+    margin: 20px;
+    box-shadow: 1px 2px 2px #222;
+    font-size: 18px;
     font-weight: bold;
     border-radius: 20px;
     background-color: #E4DAD9;
@@ -36,22 +39,23 @@ h1,h2,h3,figcaption {
     text-align: center;
     text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 4px 4px black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black;
     color: #ff9b29;
-    font-size: 38px;
+    font-size: 36px;
     margin-top: 20px;
     font-weight: bold;
 }
 
 h2,h3,figcaption {
-    font-size: 32px;
-    margin-top: auto;
+    font-size: 24px;
     text-shadow: 1px 0 0 black, -1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
 }
 
 h3 {
-    font-size: 24px;
+    margin: 0;
+    font-size: 20px;
 }
 
 figcaption {
+    margin: 0;
     font-size: 20px;
     border-radius: 20px;
     padding: 5px;
@@ -59,9 +63,9 @@ figcaption {
 
 p {
     margin: 5px 0px;
-    font-weight: bold;
     font-size: 14px;
     white-space: pre-wrap;
+	color: #ff9b29;
 }
 
 a, a:visited, a:hover, a:active {
@@ -69,17 +73,19 @@ a, a:visited, a:hover, a:active {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 1px 2px 2px black;
+    box-shadow: 1px 2px 2px #222;
     border: 1px solid black;
     border-radius: 20px;
-    padding: 25px 50px;
+    padding: 20px;
     background-color: #2A2D34;
-    margin: 20px;
-    color: #ff9b29;
-    text-shadow: 1px 0 0 black, -1px 0 0 black, 0 1px 0 black, 0 -1px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 #main-menu {
@@ -95,6 +101,13 @@ a, a:visited, a:hover, a:active {
 #game-container,#end-screen,#instructions,#options,#select-category {
     display: none;
     text-align: center;
+}
+
+#game-container {
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    width: 80%;
 }
 
 #instructions p {
@@ -134,4 +147,6 @@ a, a:visited, a:hover, a:active {
 }
 #select-category-options button{
     width: inherit;
+    margin: 0;
+    font-size: 16px;
 }

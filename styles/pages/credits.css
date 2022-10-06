@@ -3,6 +3,11 @@
     flex-direction: column;
     align-items: center;
 }
+
+#credits p {
+    color: black;
+}
+
 .person-credit {
     display: flex;
     margin: 10px 20px;

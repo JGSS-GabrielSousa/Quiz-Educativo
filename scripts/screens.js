@@ -32,13 +32,13 @@ function change_screen(screen){
 
         case "game-bootstrap":
             hideElements(["select-category"]);
-            document.getElementById("game-container").style.display = "block";
+            document.getElementById("game-container").style.display = "flex";
             question_HTML();
             break;
 
         case "end":
             hideElements(["game-container"]);
-            document.getElementById("end-screen").style.display = "flex";
+            document.getElementById("end-screen").style.display = "block";
             break;
     }
 }

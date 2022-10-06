@@ -15,18 +15,16 @@ function select_category_HTML(){
         const element = categories[i];
 
         document.getElementById("select-category-options").innerHTML += `
-            <button onclick="loadCategory('${element[0]}')"">
-                <p>${element[0]}</p>
-            </button>
-        `;
+            <button onclick="loadCategory('${element[0]}')"">${element[0]}</button>`;
     }
 }
 
 function question_HTML(){
     let html = `
+        <div id="question-text">
         <h3>Pergunta ${totalQuestions-actualQuestions.length+1} de ${totalQuestions}</h3>
         <h2>${actualQuestions[0].pergunta}</h2>
-    `;
+        </div>`;
 
     if(actualQuestions[0].nome_imagem != ""){
         html += `<img src="img/questions/${actualQuestions[0].nome_imagem}.jpg">`;
@@ -39,7 +37,7 @@ function question_HTML(){
 
         html += `
             <button id="btn${qOrder[i]}" onclick="choiceQuestion('${qOrder[i]}')">
-                <p>${actualQuestions[0][qOrder[i]]}</p>
+            ${actualQuestions[0][qOrder[i]]}
             </button>
         `;
     }
