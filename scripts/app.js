@@ -27,7 +27,7 @@ function question_HTML(){
         </div>`;
 
     if(actualQuestions[0].nome_imagem != ""){
-        html += `<img src="img/questions/${actualQuestions[0].nome_imagem}.jpg">`;
+        html += `<img src="img/questions/${actualQuestions[0].nome_imagem}.webp">`;
     }
 
     let qOrder = shuffleArray(["A","B","C","D"]); 
