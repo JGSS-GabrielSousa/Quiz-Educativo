@@ -196,7 +196,7 @@ const astronomia = [
         B: "Jupiter",
         C: "Saturno",
         D: "Urano",
-        Correta: "D",
+        Correta: "B",
     },
     {
         pergunta: "Qual o nome deste planeta?",
