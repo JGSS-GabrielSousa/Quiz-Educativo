@@ -101,6 +101,7 @@ main {
 #game-container,#end-screen,#instructions,#options,#select-category {
     display: none;
     text-align: center;
+    width: 80%;
 }
 
 #game-container {

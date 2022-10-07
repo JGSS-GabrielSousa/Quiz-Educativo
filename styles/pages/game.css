@@ -6,6 +6,9 @@
     margin: 10px;
     word-break: break-word;
 }
+#question img {
+    max-height: 500px;
+}
 #question-options {
     margin-top: 20px;
     display: grid;
