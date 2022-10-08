@@ -261,4 +261,22 @@ const geral = [
         D: "360",
         Correta: "C"
     },
+    {
+        pergunta: "Normalmente, quantos litros de sangue uma pessoa de 70kg tem?",
+        nome_imagem: "",
+        A: "Entre 4 e 6",
+        B: "Entre 2 e 4",
+        C: "Entre 6 e 8",
+        D: "Entre 8 e 10",
+        Correta: "A"
+    },
+    {
+        pergunta: "Qual o nome do primeiro homem a ir ao espaço?",
+        nome_imagem: "",
+        A: "Neil Armstrong",
+        B: "Buzz Aldrin",
+        C: "Alan Shepard",
+        D: "Iuri Gagarin",
+        Correta: "D",
+    },
 ]
