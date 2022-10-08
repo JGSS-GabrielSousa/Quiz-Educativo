@@ -8,6 +8,7 @@
 }
 #question img {
     max-height: 500px;
+    max-width: 100%;
 }
 #question-options {
     margin-top: 20px;
