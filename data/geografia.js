@@ -172,7 +172,7 @@ const geografia = [
         Correta: "A",
     },
     {
-        pergunta: "De qual país pertence esta bandeira?",
+        pergunta: "De qual país é esta bandeira?",
         nome_imagem: "flag_1",
         A: "Bahamas",
         B: "Luxemburgo",
@@ -181,7 +181,7 @@ const geografia = [
         Correta: "A",
     },
     {
-        pergunta: "De qual país pertence esta bandeira?",
+        pergunta: "De qual país é esta bandeira?",
         nome_imagem: "flag_2",
         A: "Uruguai",
         B: "Andorra",
@@ -190,7 +190,7 @@ const geografia = [
         Correta: "A",
     },
     {
-        pergunta: "De qual país pertence esta bandeira?",
+        pergunta: "De qual país é esta bandeira?",
         nome_imagem: "flag_3",
         A: "Andorra",
         B: "Moldávia",
@@ -199,7 +199,7 @@ const geografia = [
         Correta: "A",
     },
     {
-        pergunta: "De qual país pertence esta bandeira?",
+        pergunta: "De qual país é esta bandeira?",
         nome_imagem: "flag_4",
         A: "Síria",
         B: "Egito",
@@ -208,7 +208,7 @@ const geografia = [
         Correta: "A",
     },
     {
-        pergunta: "De qual país pertence esta bandeira?",
+        pergunta: "De qual país é esta bandeira?",
         nome_imagem: "flag_5",
         A: "Letônia",
         B: "Lituânia",
@@ -217,7 +217,7 @@ const geografia = [
         Correta: "A",
     },
     {
-        pergunta: "De qual país pertence esta bandeira?",
+        pergunta: "De qual país é esta bandeira?",
         nome_imagem: "flag_6",
         A: "Angola",
         B: "Congo",
@@ -226,7 +226,7 @@ const geografia = [
         Correta: "A",
     },
     {
-        pergunta: "De qual país pertence esta bandeira?",
+        pergunta: "De qual país é esta bandeira?",
         nome_imagem: "flag_7",
         A: "Noruega",
         B: "Finlândia",
@@ -235,7 +235,7 @@ const geografia = [
         Correta: "A",
     },
     {
-        pergunta: "De qual país pertence esta bandeira?",
+        pergunta: "De qual país é esta bandeira?",
         nome_imagem: "flag_8",
         A: "Moçambique",
         B: "Angola",
@@ -244,7 +244,7 @@ const geografia = [
         Correta: "A",
     },
     {
-        pergunta: "De qual país pertence esta bandeira?",
+        pergunta: "De qual país é esta bandeira?",
         nome_imagem: "flag_9",
         A: "Maldivas",
         B: "Bahamas",
@@ -253,7 +253,7 @@ const geografia = [
         Correta: "A",
     },
     {
-        pergunta: "De qual país pertence esta bandeira?",
+        pergunta: "De qual país é esta bandeira?",
         nome_imagem: "flag_10",
         A: "Togo",
         B: "Benim",
@@ -262,7 +262,7 @@ const geografia = [
         Correta: "A",
     },
     {
-        pergunta: "De qual país pertence esta bandeira?",
+        pergunta: "De qual país é esta bandeira?",
         nome_imagem: "flag_11",
         A: "Sudão do Sul",
         B: "África do Sul",
