@@ -1,4 +1,4 @@
-window.addEventListener("load", function(){
+window.addEventListener("load", () => {
     if(localStorage.getItem("number-of-questions") == null)
         localStorage.setItem("number-of-questions", "10");
 
@@ -6,11 +6,15 @@ window.addEventListener("load", function(){
     document.querySelector("#number-of-questions p").innerText = document.querySelector("#number-of-questions input").value;
 });
 
-document.querySelector("#number-of-questions input").addEventListener("input", function() {
+document.querySelector("#number-of-questions input").addEventListener("input", () => {
     document.querySelector("#number-of-questions p").innerText = this.value;
 });
 
-document.querySelector("#number-of-questions input").addEventListener("change", function() {
+document.querySelector("#number-of-questions input").addEventListener("change", () => {
     localStorage.setItem("number-of-questions", this.value);
 });
 
+window.addEventListener("beforeunload", function (event) {
+    if(!reload)
+        event.returnValue = "\o/";
+});

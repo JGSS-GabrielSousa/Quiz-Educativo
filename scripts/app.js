@@ -7,6 +7,7 @@ let totalQuestions = 0;
 let number_of_questions = 10;
 
 let inQuestionDelay = false;
+let reload = false;
 
 function select_category_HTML(){
     document.getElementById("select-category-options").innerHTML = "";
@@ -118,6 +119,11 @@ function choiceQuestion(selected){
     else{
         setTimeout(question_HTML, 2000);
     }
+}
+
+function reloadPage(){
+    reload = true;
+    document.location.reload('true')
 }
 
 function loadCategory(category){
