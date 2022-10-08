@@ -136,13 +136,13 @@ const geral = [
         Correta: "A"
     },
     {
-        pergunta: "Em qual país se localiza o Burj Khalifa (Maior Edifício do Mundo)?",
+        pergunta: "Em qual cidade se localiza o Burj Khalifa (Maior Edifício do Mundo)?",
         nome_imagem: "",
         A: "Dubai",
         B: "Qatar",
         C: "Abu Dhabi",
         D: "Doha",
-        Correta: "D"
+        Correta: "A"
     },
     {
         pergunta: "Qual destes países é transcontinental?",

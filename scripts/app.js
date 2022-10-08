@@ -123,7 +123,7 @@ function choiceQuestion(selected){
 
 function reloadPage(){
     reload = true;
-    document.location.reload('true')
+    document.location.reload('true');
 }
 
 function loadCategory(category){
