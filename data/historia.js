@@ -91,12 +91,12 @@ const historia = [
         Correta: "D"
     },
     {
-        pergunta: "Para que servia as pirâmides?",
+        pergunta: "Para que serviam as pirâmides?",
         nome_imagem: "",
         A: "Guardar comida",
         B: "Enterrar os faraós",
-        C: "Enfeitar o deserto",
-        D: "Nascimento dos faraós",
+        C: "Monumento aos deuses",
+        D: "Local de nascimento dos faraós",
         Correta: "B"
     },
     {
@@ -134,5 +134,113 @@ const historia = [
         C: "Eurípedes",
         D: "Ésquilo",
         Correta: "D"
-    }
+    },
+    {
+        pergunta: "Quem foi o europeu que descobriu o Brasil?",
+        nome_imagem: "",
+        A: "Vasco da Gama",
+        B: "Pedro Álvarez Cabral",
+        C: "Cristóvão Colombo",
+        D: "Vicente Pizon",
+        Correta: "D"
+    },
+    {
+        pergunta: "Qual foi a primeira atividade econômica realizada pelos portugueses no Brasil?",
+        nome_imagem: "",
+        A: "Plantação de Café",
+        B: "Extração de Ouro",
+        C: "Extração de Pau Brasil",
+        D: "Plantação de Cana de Açúcar",
+        Correta: "C"
+    },
+    {
+        pergunta: "O que eram as Capitanias Hereditárias?",
+        nome_imagem: "",
+        A: "Títulos que davam acesso a terras sem uso",
+        B: "Porções de terras dadas aos indígenas",
+        C: "Cargos no Governo Colônial",
+        D: "Divisão territórial das Colônias Portuguesas",
+        Correta: "D"
+    },
+    {
+        pergunta: "Qual o nome da revolta ocorrida em 1789, em Minas Gerais, devido ao imposto sobre mineradores?",
+        nome_imagem: "",
+        A: "Cabanada",
+        B: "Inconfidência Mineira",
+        C: "Revolta da Chibata",
+        D: "Guerra do Contestado",
+        Correta: "B"
+    },
+    {
+        pergunta: "Qual região foi mais importante no Ciclo do Açúcar da economia brasileira?",
+        nome_imagem: "",
+        A: "Sul",
+        B: "Nordeste",
+        C: "Sudeste",
+        D: "Norte",
+        Correta: "B"
+    },
+    {
+        pergunta: "Qual região foi mais importante no Ciclo do Café da economia brasileira?",
+        nome_imagem: "",
+        A: "Sul",
+        B: "Nordeste",
+        C: "Sudeste",
+        D: "Norte",
+        Correta: "C"
+    },
+    {
+        pergunta: "Quem foi o primeiro Presidente do Brasil?",
+        nome_imagem: "",
+        A: "Deodoro da Fonseca",
+        B: "Floriano Peixoto",
+        C: "Prudente de Morais",
+        D: "Hermes da Fonseca",
+        Correta: "A"
+    },
+    {
+        pergunta: "O que aconteceu com a Romênia no final da 1ª Guerra Mundial?",
+        nome_imagem: "",
+        A: "Perdeu território",
+        B: "Ganhou território",
+        C: "Deixou de existir por um tempo",
+        D: "Se tornou independente",
+        Correta: "B"
+    },
+    {
+        pergunta: "O que aconteceu com a Alemanha no final da 1ª Guerra Mundial?",
+        nome_imagem: "",
+        A: "Perdeu território",
+        B: "Ganhou território",
+        C: "Deixou de existir por um tempo",
+        D: "Dividiu-se em Oriental e Ocidental",
+        Correta: "A"
+    },
+    {
+        pergunta: "Napoleão Bonaparte foi líder de qual país?",
+        nome_imagem: "",
+        A: "Alemanha",
+        B: "Portugal",
+        C: "Espanha",
+        D: "França",
+        Correta: "D"
+    },
+    {
+        pergunta: "Alexandre, o Grande, foi líder de qual reino?",
+        nome_imagem: "",
+        A: "Atenas",
+        B: "Pérsia",
+        C: "Roma",
+        D: "Macedônia",
+        Correta: "D"
+    },
+    {
+        pergunta: "Em qual ano o Brasil foi elevado a Reino?",
+        nome_imagem: "",
+        A: "1822",
+        B: "1899",
+        C: "1815",
+        D: "1836",
+        Correta: "C"
+    },
 ]
