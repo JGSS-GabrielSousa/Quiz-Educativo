@@ -156,7 +156,7 @@ const historia = [
     {
         pergunta: "O que eram as Capitanias Hereditárias?",
         nome_imagem: "",
-        A: "Títulos que davam acesso a terras sem uso",
+        A: "Títulos das Cortes Portuguesas",
         B: "Porções de terras dadas aos indígenas",
         C: "Cargos no Governo Colônial",
         D: "Divisão territórial das Colônias Portuguesas",
@@ -242,5 +242,50 @@ const historia = [
         C: "1815",
         D: "1836",
         Correta: "C"
+    },
+    {
+        pergunta: "Em qual ano aconteceu a Revolução Russa?",
+        nome_imagem: "",
+        A: "1914",
+        B: "1909",
+        C: "1917",
+        D: "1877",
+        Correta: "C"
+    },
+    {
+        pergunta: "Qual desses nomes está associado à Guerra de Canudos?",
+        nome_imagem: "",
+        A: "Tiradentes",
+        B: "Antônio Conselheiro",
+        C: "Padre Cícero",
+        D: "Padre Anchieta",
+        Correta: "B"
+    },
+    {
+        pergunta: "Qual destes países participou da Guerra do Paraguai?",
+        nome_imagem: "",
+        A: "Bolívia",
+        B: "Chile",
+        C: "Peru",
+        D: "Uruguai",
+        Correta: "D"
+    },
+    {
+        pergunta: "Em qual ano começou a Idade Média?",
+        nome_imagem: "",
+        A: "476",
+        B: "1000",
+        C: "1453",
+        D: "200 a.C.",
+        Correta: "A"
+    },
+    {
+        pergunta: "Qual foi o último país da América do Sul a acabar com a escravidão?",
+        nome_imagem: "",
+        A: "Brasil",
+        B: "Argentina",
+        C: "Chile",
+        D: "Peru",
+        Correta: "A"
     },
 ]
