@@ -58,5 +58,5 @@ function endScreen(){
         document.getElementById("end-screen").innerHTML += `<h2>Você acertou ${points} de ${totalQuestions} questões (${parseInt((points/totalQuestions)*100)}%)!</h2>`;
     }
 
-    document.getElementById("end-screen").innerHTML += `<button onclick='document.location.reload("true")'>Reiniciar</button>`;
+    document.getElementById("end-screen").innerHTML += `<button onclick='reloadPage()'>Reiniciar</button>`;
 }
