@@ -102,6 +102,10 @@ main {
     text-align: center;
 }
 
+#end-screen {
+    width: 80%;
+}
+
 #game-container {
     flex-direction: column;
     align-items: center;
