@@ -78,7 +78,6 @@ a, a:visited, a:hover, a:active {
     border-radius: 20px;
     padding: 20px;
     background-color: #2A2D34;
-    width: 100%;
 }
 
 main {
@@ -101,21 +100,20 @@ main {
 #game-container,#end-screen,#instructions,#options,#select-category {
     display: none;
     text-align: center;
-    width: 80%;
 }
 
 #game-container {
     flex-direction: column;
     align-items: center;
-    height: 500px;
     width: 80%;
+    margin-top: 20px;
 }
 
 #instructions p {
     text-align: justify;
     line-height: 1.5;
-    width: 100%;
-    margin: 10px;
+    margin: 20px 0px;
+    font-size: 16px;
 }
 
 #options input {

@@ -6,6 +6,7 @@ function change_screen(screen){
             hideElements(["credits","instructions","options","select-category"]);
             document.getElementById("main-menu").style.display = "grid";
             document.getElementById("title").innerText = "Quiz Educativo";
+            document.getElementById("title").style.display = "block";
             break;
 
         case "instructions":
@@ -33,6 +34,7 @@ function change_screen(screen){
         case "game-bootstrap":
             hideElements(["select-category"]);
             document.getElementById("game-container").style.display = "flex";
+            document.getElementById("title").style.display = "none";
             question_HTML();
             break;
 
